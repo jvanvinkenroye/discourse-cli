@@ -1,0 +1,70 @@
+site_name: Discourse CLI
+site_description: Command-line tool for Discourse forum administration via REST API
+repo_url: https://github.com/yourusername/discourse-cli
+repo_name: discourse-cli
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - def_list
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Configuration: configuration.md
+  - Output Formats: output-formats.md
+  - Commands:
+      - commands/index.md
+      - config: commands/config.md
+      - users: commands/users.md
+      - admin: commands/admin.md
+      - topics: commands/topics.md
+      - posts: commands/posts.md
+      - categories: commands/categories.md
+      - groups: commands/groups.md
+      - tags: commands/tags.md
+      - badges: commands/badges.md
+      - search: commands/search.md
+      - messages: commands/messages.md
+      - notifications: commands/notifications.md
+      - backups: commands/backups.md
+      - invites: commands/invites.md
+      - site: commands/site.md
+      - uploads: commands/uploads.md
+      - api: commands/api.md

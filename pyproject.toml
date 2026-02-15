@@ -3,7 +3,7 @@ name = "discourse-cli"
 version = "0.1.0"
 description = "CLI tool for Discourse forum administration via REST API"
 readme = "README.md"
-license = "MIT"
+license = "WTFPL"
 requires-python = ">=3.11"
 dependencies = [
     "click>=8.1",
@@ -45,4 +45,6 @@ dev = [
     "pytest>=8.0",
     "pytest-httpx>=0.30",
     "ruff>=0.5",
+    "mkdocs>=1.6",
+    "mkdocs-material>=9.5",
 ]
