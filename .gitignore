@@ -24,6 +24,7 @@ Thumbs.db
 
 # Config with secrets
 .env
+config.yaml
 
 # Testing
 .pytest_cache/
