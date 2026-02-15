@@ -8,6 +8,12 @@ from discourse_cli.cli.options import ClientContext
 
 @click.group()
 @click.version_option(version=__version__, prog_name="discourse")
+@click.option(
+    "--profile",
+    "-p",
+    default=None,
+    help="Named config profile to use.",
+)
 @click.option("--url", envvar="DISCOURSE_URL", help="Discourse instance URL.")
 @click.option("--api-key", envvar="DISCOURSE_API_KEY", help="API key.")
 @click.option(
@@ -19,12 +25,14 @@ from discourse_cli.cli.options import ClientContext
 @click.pass_context
 def cli(
     ctx: click.Context,
+    profile: str | None,
     url: str | None,
     api_key: str | None,
     api_username: str | None,
 ) -> None:
     """Discourse CLI - Admin tool for Discourse forums."""
     client_ctx = ctx.ensure_object(ClientContext)
+    client_ctx.profile = profile
     client_ctx.url = url
     client_ctx.api_key = api_key
     client_ctx.api_username = api_username

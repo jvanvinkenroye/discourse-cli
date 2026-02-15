@@ -44,6 +44,7 @@ class ClientContext:
 
     def __init__(self) -> None:
         self._client: DiscourseClient | None = None
+        self.profile: str | None = None
         self.url: str | None = None
         self.api_key: str | None = None
         self.api_username: str | None = None
@@ -56,6 +57,7 @@ class ClientContext:
                 url=self.url,
                 api_key=self.api_key,
                 api_username=self.api_username,
+                profile=self.profile,
             )
             self._client = DiscourseClient(config)
         return self._client
