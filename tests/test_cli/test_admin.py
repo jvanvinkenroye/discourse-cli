@@ -3,9 +3,8 @@
 import json
 from unittest.mock import patch
 
-from click.testing import CliRunner
-
 import pytest
+from click.testing import CliRunner
 
 from discourse_cli.cli.main import cli
 from discourse_cli.config.models import DiscourseConfig

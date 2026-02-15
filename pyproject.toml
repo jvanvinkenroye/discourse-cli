@@ -31,6 +31,26 @@ target-version = "py311"
 [tool.ruff.lint]
 select = ["E", "F", "I", "N", "W", "UP"]
 
+[tool.ruff.lint.per-file-ignores]
+"src/discourse_cli/api/__init__.py" = ["E501"]
+"src/discourse_cli/api/admin.py" = ["E501"]
+"src/discourse_cli/api/backups.py" = ["E501"]
+"src/discourse_cli/api/badges.py" = ["E501"]
+"src/discourse_cli/api/categories.py" = ["E501"]
+"src/discourse_cli/api/events.py" = ["E501"]
+"src/discourse_cli/api/groups.py" = ["E501"]
+"src/discourse_cli/api/invites.py" = ["E501"]
+"src/discourse_cli/api/notifications.py" = ["E501"]
+"src/discourse_cli/api/posts.py" = ["E501"]
+"src/discourse_cli/api/private_messages.py" = ["E501"]
+"src/discourse_cli/api/search.py" = ["E501"]
+"src/discourse_cli/api/site.py" = ["E501"]
+"src/discourse_cli/api/tags.py" = ["E501"]
+"src/discourse_cli/api/topics.py" = ["E501"]
+"src/discourse_cli/api/uploads.py" = ["E501"]
+"src/discourse_cli/api/users.py" = ["E501"]
+"src/discourse_cli/api/client.py" = ["E501"]
+
 [tool.mypy]
 python_version = "3.11"
 strict = true

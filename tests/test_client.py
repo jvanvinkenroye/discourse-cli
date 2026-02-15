@@ -1,16 +1,15 @@
 """Tests for the HTTP client."""
 
-from unittest.mock import MagicMock, patch
+from unittest.mock import patch
 
 import httpx
 import pytest
 
-from discourse_cli.api.client import BaseClient, DiscourseClient
+from discourse_cli.api.client import DiscourseClient
 from discourse_cli.config.models import DiscourseConfig
 from discourse_cli.exceptions import (
     AuthenticationError,
     NotFoundError,
-    RateLimitError,
     ValidationError,
 )
 

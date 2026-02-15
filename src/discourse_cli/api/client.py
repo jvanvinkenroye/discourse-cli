@@ -5,9 +5,6 @@ from typing import Any
 
 import httpx
 
-from discourse_cli.config.models import DiscourseConfig
-from discourse_cli.exceptions import DiscourseError, RateLimitError, map_http_error
-
 # Generated mixin imports
 from discourse_cli.api.admin import AdminMixin
 from discourse_cli.api.backups import BackupsMixin
@@ -25,6 +22,8 @@ from discourse_cli.api.tags import TagsMixin
 from discourse_cli.api.topics import TopicsMixin
 from discourse_cli.api.uploads import UploadsMixin
 from discourse_cli.api.users import UsersMixin
+from discourse_cli.config.models import DiscourseConfig
+from discourse_cli.exceptions import DiscourseError, RateLimitError, map_http_error
 
 MAX_RETRIES = 3
 RETRY_BACKOFF = 2.0

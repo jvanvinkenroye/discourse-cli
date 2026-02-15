@@ -7,13 +7,15 @@ Provides direct access to any Discourse API endpoint:
 """
 
 import json
-import sys
 
 import click
 
-from discourse_cli.api.client import DiscourseClient
-from discourse_cli.cli.options import api_command, pass_context, render
-from discourse_cli.cli.options import ClientContext, output_option
+from discourse_cli.cli.options import (
+    ClientContext,
+    output_option,
+    pass_context,
+    render,
+)
 from discourse_cli.exceptions import ConfigError, DiscourseError
 
 

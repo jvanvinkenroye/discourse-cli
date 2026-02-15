@@ -320,7 +320,10 @@ def update_client_imports(tags_used: list[str]) -> None:
     )
 
     # Add imports after the existing imports
-    marker = "from discourse_cli.exceptions import DiscourseError, RateLimitError, map_http_error"
+    marker = (
+        "from discourse_cli.exceptions import"
+        " DiscourseError, RateLimitError, map_http_error"
+    )
     content = content.replace(
         marker,
         f"{marker}\n\n# Generated mixin imports\n{import_block}",
